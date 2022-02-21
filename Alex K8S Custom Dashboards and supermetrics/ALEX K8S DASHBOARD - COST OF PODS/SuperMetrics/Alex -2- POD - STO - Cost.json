@@ -1,0 +1,12 @@
+{"8c7fb6f0-277b-434c-80c8-75533f3d4631": {
+   "resourceKinds": [{
+      "resourceKindKey": "K8S-Pod",
+      "adapterKindKey": "KubernetesAdapter"
+   }],
+   "modificationTime": 1645441470581,
+   "name": "Alex -2- POD - STO - Cost",
+   "formula": "(sum(${adaptertype=KubernetesAdapter, objecttype=Container, metric=Filesystem|TotalUsage, depth=1}) / (1024*avg(${adaptertype=VMWARE, objecttype=VirtualMachine, metric=diskspace|provisionedSpace,depth=-2}))) * avg(${adaptertype=VMWARE, objecttype=VirtualMachine, attribute=cost|effectiveDailyStorageCost, depth=-2})",
+   "description": "",
+   "unitId": "currency",
+   "modifiedBy": "ecd92cea-a19e-4d13-8615-35d2c26b391b"
+}}

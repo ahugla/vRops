@@ -1,0 +1,12 @@
+{"ec51af72-6e92-4422-9e93-2ea2d4a68bef": {
+   "resourceKinds": [{
+      "resourceKindKey": "K8S-Pod",
+      "adapterKindKey": "KubernetesAdapter"
+   }],
+   "modificationTime": 1645430875023,
+   "name": "Alex -2- POD - MEM - Cost",
+   "formula": "(sum(${adaptertype=KubernetesAdapter, objecttype=Container, attribute=Memory|Usage, depth=1}) / (avg(${adaptertype=KubernetesAdapter, objecttype=K8S-Minion, attribute=capacity|memory, depth=-1}) * 1024)) * avg(${adaptertype=VMWARE, objecttype=VirtualMachine, attribute=cost|effectiveDailyMemoryCost, depth=-2})",
+   "description": "",
+   "unitId": "currency",
+   "modifiedBy": "ecd92cea-a19e-4d13-8615-35d2c26b391b"
+}}

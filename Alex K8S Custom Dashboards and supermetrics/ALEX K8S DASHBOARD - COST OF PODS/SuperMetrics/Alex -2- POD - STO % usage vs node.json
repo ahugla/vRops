@@ -1,0 +1,12 @@
+{"3cf272d8-c190-4d13-8352-4abb1f665ed6": {
+   "resourceKinds": [{
+      "resourceKindKey": "K8S-Pod",
+      "adapterKindKey": "KubernetesAdapter"
+   }],
+   "modificationTime": 1645207310714,
+   "name": "Alex -2- POD - STO % usage vs node",
+   "formula": "100 * avg(${adaptertype=KubernetesAdapter, objecttype=Container, metric=Filesystem|TotalUsage, depth=1}) / (1024*avg(${adaptertype=VMWARE, objecttype=VirtualMachine, metric=diskspace|provisionedSpace,depth=-2}))",
+   "description": "",
+   "unitId": "percent",
+   "modifiedBy": "ecd92cea-a19e-4d13-8615-35d2c26b391b"
+}}

@@ -1,0 +1,12 @@
+{"df14dd95-0e2d-4314-8c63-23f734da7bfa": {
+   "resourceKinds": [{
+      "resourceKindKey": "K8S-Pod",
+      "adapterKindKey": "KubernetesAdapter"
+   }],
+   "modificationTime": 1645207568054,
+   "name": "Alex -2- POD - MEM % usage vs node",
+   "formula": "100 * sum(${adaptertype=KubernetesAdapter, objecttype=Container, attribute=Memory|Usage, depth=1}) / (avg(${adaptertype=KubernetesAdapter, objecttype=K8S-Minion, attribute=capacity|memory, depth=-1}) * 1024)",
+   "description": "",
+   "unitId": "percent",
+   "modifiedBy": "ecd92cea-a19e-4d13-8615-35d2c26b391b"
+}}
